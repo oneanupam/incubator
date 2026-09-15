@@ -2,7 +2,7 @@
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.6.0
+    rev: v6.0.0
     hooks:
       - id: no-commit-to-branch
         args: [--branch, main, --branch, master]
@@ -12,6 +12,6 @@ repos:
       - id: check-added-large-files
       - id: detect-private-key
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.18.4
+    rev: v8.24.2
     hooks:
       - id: gitleaks
