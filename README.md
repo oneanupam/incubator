@@ -1,7 +1,10 @@
 # Incubator
-Nurturing Cloud and DevOps skills from the ground up.
+
+A space to learn, practice, and explore the concepts, tools, and workflows that shape modern Cloud and DevOps.
 
 ## Prerequisites
+Install the following prerequisite before contributing:
+
 - [pre-commit](https://pre-commit.com/) >= 4.2.0
 
 ## Repo Layout
@@ -38,7 +41,13 @@ Hook configuration is managed in [`.pre-commit-config.yaml`](.pre-commit-config.
 
 ## Contributing
 
-Contributions are welcome! Please open issues or submit pull requests for improvements or new suggestions. Read the [contributing.md](CONTRIBUTING.md) before starting.
+Contributions and suggestions are welcome. Before opening an issue or pull request:
+
+1. Review the [contribution guidelines](CONTRIBUTING.md).
+2. Install the pre-commit hooks and run them against your changes.
+3. Open an issue for bugs or ideas, or submit a pull request with a clear description of the change.
+
+Please keep contributions focused and follow the repository's formatting and commit message conventions.
 
 ## License
 
