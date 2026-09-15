@@ -1,26 +1,16 @@
-# App Repo Template
-
-A ready-to-use template repository for quickly bootstrapping new projects.
+# Incubator
+Nurturing Cloud and DevOps skills from the ground up.
 
 ## Prerequisites
-
 - [pre-commit](https://pre-commit.com/) >= 4.2.0
-- [kubectl](https://kubernetes.io/docs/tasks/tools/) >= v1.30.5
-- [helm](https://helm.sh/) >= 3.13.1
-
-> [!NOTE]
-> See [Installation Guide](https://kubernetes.io/docs/tasks/tools/) on how to install Kubernetes Tools.
 
 ## Repo Layout
-At a high level, these folders make up the `github.com/oneanupam/app-repo-template` repository.
+At a high level, these folders make up the `github.com/oneanupam/incubator` repository.
 
 - [`.github/`](./.github) - This folder contains the codeowners, pull request template and github action yaml files.
 - [`.vscode/`](./.vscode) - It contains project-specific settings and configurations to customize how VS Code behaves for the workspace.
 - [`build/`](./build) - This folder contains the build config files to build/deploy the application code.
 - [`docs/`](./docs) - This folder contains the documentations related to the repository.
-- [`examples/`](./examples) - This folder contains the examples to use the module or code.
-- [`helm-charts/`](./helm-charts) - This folder contains the helm chart to deploy the kubernetes manifests.
-- [`helm-overrides/`](./helm-overrides) - This folder contains the override files to pass to variables declared in helm charts.
 - [`src/`](./src) - This folder contains the application code or scripts.
 - [`.pre-commit-config.yaml`](.pre-commit-config.yaml) - This file contains the plugin configuration for pre-commit.
 - [`.editorconfig`](.editorconfig) - This file has the configuration for the editorconfig plugin.
