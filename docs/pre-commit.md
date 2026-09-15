@@ -4,23 +4,57 @@ It is a multi-language package manager for pre-commit hooks. You specify a list 
 
 ## How to run pre-commit
 
-Run the below commnad from the git repo root to set up the git hook scripts into your git hooks. It will be installed at .git/hooks/pre-commit
+Run these commands from the repository root.
+
+### Install the hooks
+
+Install the Git hooks for the repository:
 
 ```bash
 pre-commit install
 ```
 
-now pre-commit will run automatically on git commit. Usually, it runs only for the changed files. Its good to run the hooks against all the files when adding new hooks. To manually run all pre-commit hooks on a repo, use below -
+If the configuration file has a non-standard name, specify it with `--config`:
 
 ```bash
-# to run hooks on all files
-pre-commit run --all-files
-
-# to run individual hook
-pre-commit run <hook_id>
+pre-commit install --config <config-file>
 ```
 
-Once you have pre-commit installed, adding pre-commit plugins to your project is done with the .pre-commit-config.yaml configuration file. You can generate a very basic configuration using `pre-commit sample-config`. Every time you clone a project using pre-commit running pre-commit install should always be the first thing you do.
+This installs the hook into `.git/hooks/pre-commit`. Once installed, pre-commit runs automatically when you commit changes. By default, it checks only the files included in the commit.
+
+### Validate the configuration
+
+Validate the repository's pre-commit configuration with:
+
+```bash
+pre-commit validate-config
+```
+
+### Run the hooks manually
+
+Run all hooks against every file:
+
+```bash
+pre-commit run --all-files
+```
+
+To use a non-standard configuration file, add the `--config` option:
+
+```bash
+pre-commit run --all-files --config <config-file>
+```
+
+Run a specific hook with:
+
+```bash
+pre-commit run <hook-id>
+```
+
+Hook configuration is managed in `.pre-commit-config.yaml`. To generate a starter configuration, run:
+
+```bash
+pre-commit sample-config
+```
 
 ## References
 - https://pre-commit.com/
