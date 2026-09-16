@@ -3,7 +3,7 @@
 A space to learn, practice, and explore the concepts, tools, and workflows that shape modern Cloud and DevOps.
 
 ## Prerequisites
-Install the following prerequisite before contributing:
+Install the required tools before contributing to this project:
 
 - [pre-commit](https://pre-commit.com/) >= 4.2.0
 
@@ -19,25 +19,22 @@ At a high level, these folders make up the `github.com/oneanupam/incubator` repo
 - [`.editorconfig`](.editorconfig) - This file has the configuration for the editorconfig plugin.
 
 ## Run pre-commit
-From the repository root, install the pre-commit Git hooks:
+This repository already includes a `.pre-commit-config.yaml`. Run the following commands to install the hooks locally:
 
 ```bash
+python -m pip install pre-commit
 pre-commit install
+pre-commit validate-config
 ```
 
-Once installed, pre-commit runs automatically when you commit changes. By default, it checks only the files included in the commit.
+This installs the hook into `.git/hooks/pre-commit`. Once installed, pre-commit runs automatically when you commit changes. By default, it checks only the files included in the commit.
 
 To run all hooks manually, use:
 
 ```bash
-# Run all hooks against every file
 pre-commit run --all-files
-
-# Run a specific hook
-pre-commit run <hook-id>
+pre-commit run <hook_id>
 ```
-
-Hook configuration is managed in [`.pre-commit-config.yaml`](.pre-commit-config.yaml). To generate a starter configuration, run `pre-commit sample-config`.
 
 ## Contributing
 
@@ -46,8 +43,6 @@ Contributions and suggestions are welcome. Before opening an issue or pull reque
 1. Review the [contribution guidelines](CONTRIBUTING.md).
 2. Install the pre-commit hooks and run them against your changes.
 3. Open an issue for bugs or ideas, or submit a pull request with a clear description of the change.
-
-Please keep contributions focused and follow the repository's formatting and commit message conventions.
 
 ## License
 
